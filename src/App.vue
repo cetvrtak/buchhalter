@@ -1,26 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HeroSection />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeroSection from './components/HeroSection.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HeroSection,
+  },
+};
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: Inter;
+}
+.main-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1440px) {
+  .main-container {
+    padding: 0 24px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main-container {
+    padding: 0 16px;
+  }
 }
 </style>
