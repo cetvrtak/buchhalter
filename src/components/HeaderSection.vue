@@ -186,5 +186,11 @@
     gap: 0;
     position: absolute;
   }
+  .header-links-container.active {
+    display: flex;
+  }
+  .header-link-container {
+    display: none;
+  }
 }
 </style>
