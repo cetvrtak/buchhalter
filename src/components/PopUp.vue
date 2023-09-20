@@ -20,6 +20,9 @@
         </g>
       </svg>
     </div>
+    <div class="popup-title-container">
+      <span class="popup-title">Оставьте заявку и мы перезвоним</span>
+    </div>
   </div>
 </template>
 
@@ -63,5 +66,18 @@
   position: absolute;
   top: 32px;
   right: 32px;
+}
+.popup-title-container {
+  max-width: 569px;
+
+  margin-bottom: 74px;
+}
+.popup-title {
+  color: #fff;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 133.333% */
 }
 </style>
