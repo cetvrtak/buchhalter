@@ -10,7 +10,7 @@ import $ from 'jquery';
 
 $(document).ready(function () {
   const openPopUp = function () {
-    $('.overlay, .popup-container').show();
+    $('.overlay, .popup-container').fadeIn('slow');
   };
   const closePopUp = function () {
     $('.overlay, .popup-container').hide();
