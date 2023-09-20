@@ -23,6 +23,26 @@
     <div class="popup-title-container">
       <span class="popup-title">Оставьте заявку и мы перезвоним</span>
     </div>
+    <div class="popup-info-container">
+      <div class="popup-input-container">
+        <label for="name" class="popup-input-label">Имя</label>
+        <input
+          type="text"
+          class="popup-input-field"
+          id="name"
+          placeholder="Иван"
+        />
+      </div>
+      <div class="popup-input-container">
+        <label for="phone" class="popup-input-label">Телефон</label>
+        <input
+          type="text"
+          class="popup-input-field"
+          id="phone"
+          placeholder="+ 7"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -79,5 +99,55 @@
   font-style: normal;
   font-weight: 700;
   line-height: 48px; /* 133.333% */
+}
+.popup-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+
+  margin-bottom: 112px;
+}
+.popup-input-container {
+  width: 100%;
+  max-width: 569px;
+  height: 96px;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+}
+.popup-input-label {
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 200% */
+  text-transform: uppercase;
+}
+.popup-input-field {
+  width: 100%;
+  max-width: 569px;
+  height: 60px;
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.1);
+
+  padding: 16px 24px;
+}
+.popup-input-field::placeholder {
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
 }
 </style>
