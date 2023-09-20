@@ -1,14 +1,30 @@
 <template>
+  <PopUp />
   <HeroSection />
 </template>
 
 <script>
 import HeroSection from './components/HeroSection.vue';
+import PopUp from './components/PopUp.vue';
+import $ from 'jquery';
+
+$(document).ready(function () {
+  const openPopUp = function () {
+    $('.overlay').show();
+  };
+  const closePopUp = function () {
+    $('.overlay').hide();
+  };
+
+  $('.hero-button').on('click', openPopUp);
+  $('.overlay').on('click', closePopUp);
+});
 
 export default {
   name: 'App',
   components: {
     HeroSection,
+    PopUp,
   },
 };
 </script>
