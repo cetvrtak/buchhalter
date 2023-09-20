@@ -151,6 +151,7 @@
 
   padding: 16px 24px;
 }
+.popup-input-field,
 .popup-input-field::placeholder {
   color: #fff;
   font-family: Inter;
