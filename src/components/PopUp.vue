@@ -43,6 +43,18 @@
         />
       </div>
     </div>
+    <div class="popup-button-container">
+      <div class="popup-button-desc">
+        Нажимая на кнопку, я даю согласие на обработку персональных данных в
+        соответствии с
+        <span class="popup-button-desc-policy"
+          >Политикой конфиденциальности</span
+        >
+      </div>
+      <div class="popup-button">
+        <div class="popup-button-text">Отправить</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -149,5 +161,42 @@
   font-style: normal;
   font-weight: 600;
   line-height: 28px; /* 155.556% */
+}
+.popup-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.popup-button-desc {
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+
+  opacity: 0.5;
+}
+.popup-button-desc-policy {
+  text-decoration: underline;
+}
+.popup-button {
+  max-width: 162px;
+  display: inline-flex;
+  padding: 18px 32px;
+  align-items: flex-start;
+  gap: 8px;
+
+  border-radius: 32px 0px;
+  background: #ff6a2a;
+}
+.popup-button-text {
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
 }
 </style>
