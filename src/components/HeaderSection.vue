@@ -10,20 +10,43 @@
               class="header-logo"
             />
           </div>
-          <ul class="header-links-container">
-            <li class="header-link-container">
-              <a href="#" class="header-link">Преимущества</a>
-            </li>
-            <li class="header-link-container">
-              <a href="#" class="header-link">Услуги</a>
-            </li>
-            <li class="header-link-container">
-              <a href="#" class="header-link">Новости</a>
-            </li>
-            <li class="header-link-container">
-              <a href="#" class="header-link">Отзывы</a>
-            </li>
-          </ul>
+          <div class="header-menu-links-container">
+            <div class="header-menu-container">
+              <div class="header-menu-icon-wrapper">
+                <div class="header-menu-text">Меню</div>
+                <svg
+                  class="header-menu-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                >
+                  <path
+                    d="M4.5 6.75L9 11.25L13.5 6.75"
+                    stroke="#FF6A2A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <ul class="header-links-container">
+              <li class="header-link-container">
+                <a href="#" class="header-link">Преимущества</a>
+              </li>
+              <li class="header-link-container">
+                <a href="#" class="header-link">Услуги</a>
+              </li>
+              <li class="header-link-container">
+                <a href="#" class="header-link">Новости</a>
+              </li>
+              <li class="header-link-container">
+                <a href="#" class="header-link">Отзывы</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="header-contact-container">
           <div class="header-phone-container">
@@ -66,6 +89,9 @@
 }
 .header-logo {
   margin-bottom: 5px;
+}
+.header-menu-icon-wrapper {
+  display: none;
 }
 .header-links-container {
   display: flex;
@@ -131,5 +157,34 @@
   font-style: normal;
   font-weight: 600;
   line-height: 24px; /* 171.429% */
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  .header-menu-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+  .header-menu-text {
+    color: #fff;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 160% */
+  }
+  .header-menu-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .header-links-container {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+  }
 }
 </style>
