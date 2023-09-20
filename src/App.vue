@@ -10,14 +10,14 @@ import $ from 'jquery';
 
 $(document).ready(function () {
   const openPopUp = function () {
-    $('.overlay').show();
+    $('.overlay, .popup-container').show();
   };
   const closePopUp = function () {
-    $('.overlay').hide();
+    $('.overlay, .popup-container').hide();
   };
 
   $('.hero-button').on('click', openPopUp);
-  $('.overlay').on('click', closePopUp);
+  $('.overlay, .popup-close-btn').on('click', closePopUp);
 });
 
 export default {
