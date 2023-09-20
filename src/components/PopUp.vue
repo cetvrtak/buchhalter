@@ -87,6 +87,7 @@
     linear-gradient(117deg, #4851fd 24.84%, #ff6a2a 124.17%), #4851fd;
 
   padding: 102px 119px 98px;
+  width: 807px;
 }
 .popup-close-btn {
   width: 24px;
@@ -100,8 +101,6 @@
   right: 32px;
 }
 .popup-title-container {
-  max-width: 569px;
-
   margin-bottom: 74px;
 }
 .popup-title {
@@ -123,7 +122,6 @@
 }
 .popup-input-container {
   width: 100%;
-  max-width: 569px;
   height: 96px;
   flex-shrink: 0;
 
@@ -144,7 +142,6 @@
 }
 .popup-input-field {
   width: 100%;
-  max-width: 569px;
   height: 60px;
   flex-shrink: 0;
 
