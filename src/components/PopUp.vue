@@ -197,4 +197,30 @@
   font-weight: 600;
   line-height: 24px; /* 133.333% */
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1366px) {
+  .popup-container {
+    width: 647px;
+    padding: 62px 39px 58px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .popup-container {
+    width: 569px;
+    padding: 62px 39px 58px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .popup-container {
+    width: 100%;
+    height: 100vh;
+    padding: 72px 16px 48px;
+    border-radius: initial;
+  }
+  .popup-button-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
 </style>
