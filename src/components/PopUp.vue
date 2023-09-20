@@ -184,6 +184,7 @@
   display: inline-flex;
   padding: 18px 32px;
   align-items: flex-start;
+  justify-content: center;
   gap: 8px;
 
   border-radius: 32px 0px;
@@ -214,13 +215,70 @@
 @media screen and (max-width: 650px) {
   .popup-container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
     padding: 72px 16px 48px;
     border-radius: initial;
+  }
+  .popup-close-btn {
+    top: 16px;
+    right: 16px;
+  }
+  .popup-title-container {
+    width: 215px;
+    margin: 0 auto 47px;
+  }
+  .popup-title {
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+  }
+  .popup-info-container {
+    margin-bottom: 74px;
+  }
+  .popup-input-label {
+    color: #fff;
+    font-family: Inter;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 311.111% */
+    text-transform: uppercase;
+  }
+  .popup-input-field {
+    padding: 10px 12px 10px 16px;
+  }
+  .popup-input-field,
+  .popup-input-field::placeholder {
+    color: #fff;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 166.667% */
   }
   .popup-button-container {
     flex-direction: column;
     gap: 16px;
+  }
+  .popup-button-desc {
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 160% */
+  }
+  .popup-button {
+    max-width: none;
+    width: 196px;
   }
 }
 </style>
