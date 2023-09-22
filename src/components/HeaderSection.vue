@@ -52,9 +52,9 @@
           <div class="header-phone-container">
             <span class="header-phone">8 (812) 603-71-79</span>
           </div>
-          <div class="header-button">
+          <a href="tel:8 (812) 603-71-79" class="header-button">
             <div class="header-button-text">Обратный звонок</div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -149,6 +149,8 @@
 
   border-radius: 32px;
   background: rgba(255, 255, 255, 0.15);
+
+  text-decoration: none;
 }
 .header-button-text {
   color: #fff;
