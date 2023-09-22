@@ -21,7 +21,7 @@ $(document).ready(function () {
   $('.hero-button').on('click', openPopUp);
   $('.overlay, .popup-close-btn').on('click', closePopUp);
 
-  $('.header-menu-icon-wrapper').on('click', function () {
+  $('.header-menu-container').on('click', function () {
     $('.header-links-container, .header-link-container').toggleClass('active');
 
     var $headerLinksContainer = $('.header-links-container');

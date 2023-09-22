@@ -12,6 +12,24 @@
           </div>
           <div class="header-menu-links-container">
             <div class="header-menu-container">
+              <div class="header-hamburger-wrapper">
+                <svg
+                  class="header-hamburger"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M2.5 10H17.5M2.5 5H17.5M7.5 15H17.5"
+                    stroke="#FF6A2A"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
               <div class="header-menu-icon-wrapper">
                 <div class="header-menu-text">Меню</div>
                 <svg
@@ -90,7 +108,8 @@
 .header-logo {
   margin-bottom: 5px;
 }
-.header-menu-icon-wrapper {
+.header-menu-icon-wrapper,
+.header-hamburger-wrapper {
   display: none;
 }
 .header-links-container {
@@ -162,7 +181,10 @@
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .header-section {
+    padding: 30px 0;
+  }
   .header-menu-icon-wrapper {
     display: inline-flex;
     align-items: center;
@@ -193,6 +215,63 @@
   }
   .header-link-container {
     display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-section {
+    padding: 20px 0;
+  }
+  .header-container {
+    position: relative;
+    padding-right: 36px;
+  }
+  .header-menu-links-container {
+    position: absolute;
+    right: 0;
+    top: 6px;
+  }
+  .header-links-container {
+    right: 0;
+    align-items: flex-end;
+  }
+  .header-menu-icon-wrapper,
+  .header-button {
+    display: none;
+  }
+  .header-hamburger-wrapper {
+    display: flex;
+  }
+  .header-hamburger {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+}
+@media screen and (max-width: 359px) {
+  .header-section {
+    padding: 16px 0;
+  }
+  .header-logo {
+    content: url('../assets/logo_sm.png');
+    margin: 0;
+  }
+  .header-phone {
+    color: #fff;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 215.385% */
+  }
+  .header-menu-links-container {
+    top: 4px;
+  }
+  .header-links-container.active {
+    width: calc(100vw - 32px);
+    margin-top: 6px;
+  }
+  .header-link-container {
+    padding: 6px 0;
   }
 }
 </style>
