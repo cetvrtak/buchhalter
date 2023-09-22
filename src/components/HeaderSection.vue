@@ -247,7 +247,7 @@
     flex-shrink: 0;
   }
 }
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 374px) {
   .header-section {
     padding: 16px 0;
   }
