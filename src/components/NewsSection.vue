@@ -54,6 +54,21 @@ export default {
             <div class="news-date">29 мая 2023</div>
           </div>
         </div>
+        <div class="news-card">
+          <div class="news-image-container">
+            <img
+              src="https://picsum.photos/451/297"
+              alt=""
+              class="news-image"
+            />
+          </div>
+          <div class="news-text">
+            <div class="news-desc">
+              Критерии упрощенной системы налогообложения в 2023 году
+            </div>
+            <div class="news-date">29 мая 2023</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
