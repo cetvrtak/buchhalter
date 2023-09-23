@@ -104,6 +104,7 @@ export default {
 }
 .news-image {
   border-radius: 32px 32px 0px 0px;
+  width: 100%;
 }
 .news-text {
   display: flex;
