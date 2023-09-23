@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <section class="map-section">
     <div class="map-container" style="position: relative; overflow: hidden">
       <iframe
         class="map"
@@ -10,7 +10,7 @@
         style="position: relative"
       ></iframe>
     </div>
-  </div>
+  </section>
 </template>
 
 <style>

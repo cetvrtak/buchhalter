@@ -2,7 +2,9 @@
   <PopUp />
   <HeaderSection />
   <HeroSection />
-  <MapSection />
+  <div class="main-container">
+    <MapSection />
+  </div>
 </template>
 
 <script>
