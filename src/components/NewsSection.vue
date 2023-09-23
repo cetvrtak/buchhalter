@@ -102,7 +102,7 @@ export default {
   align-items: flex-start;
   flex: 1 0 0;
 }
-.news-image-container {
+.news-image {
   border-radius: 32px 32px 0px 0px;
 }
 .news-text {
