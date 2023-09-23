@@ -2,12 +2,14 @@
   <PopUp />
   <HeaderSection />
   <HeroSection />
+  <MapSection />
 </template>
 
 <script>
 import HeroSection from './components/HeroSection.vue';
 import PopUp from './components/PopUp.vue';
 import HeaderSection from './components/HeaderSection.vue';
+import MapSection from './components/MapSection.vue';
 import $ from 'jquery';
 
 $(document).ready(function () {
@@ -63,6 +65,7 @@ export default {
     HeroSection,
     PopUp,
     HeaderSection,
+    MapSection,
   },
 };
 </script>
