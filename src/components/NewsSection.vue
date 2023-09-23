@@ -1,8 +1,26 @@
+<script>
+import 'slick-carousel/slick/slick.min.js';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import $ from 'jquery';
+
+export default {
+  mounted() {
+    $(this.$refs.slickCarousel).slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: true,
+    });
+  },
+};
+</script>
+
 <template>
   <section class="news-section">
     <div class="news-container">
       <div class="news-title">Новости</div>
-      <div class="news-carousel">
+      <div class="news-carousel" ref="slickCarousel">
         <div class="news-card">
           <div class="news-image-container">
             <img src="../assets/news-image-1.png" alt="" class="news-image" />
@@ -54,6 +72,10 @@
   line-height: 48px; /* 133.333% */
 
   margin-bottom: 40px;
+}
+.slick-track {
+  display: flex;
+  gap: 24px;
 }
 .news-card {
   border-radius: 32px;
