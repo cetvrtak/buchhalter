@@ -3,6 +3,7 @@
   <HeaderSection />
   <HeroSection />
   <div class="main-container">
+    <NewsSection />
     <MapSection />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import HeroSection from './components/HeroSection.vue';
 import PopUp from './components/PopUp.vue';
 import HeaderSection from './components/HeaderSection.vue';
+import NewsSection from './components/NewsSection.vue';
 import MapSection from './components/MapSection.vue';
 import $ from 'jquery';
 
@@ -67,6 +69,7 @@ export default {
     HeroSection,
     PopUp,
     HeaderSection,
+    NewsSection,
     MapSection,
   },
 };
