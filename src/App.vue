@@ -78,7 +78,7 @@ export default {
   font-family: Inter;
 }
 .main-container {
-  max-width: 1440px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
 }
