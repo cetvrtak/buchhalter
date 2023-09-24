@@ -1,3 +1,34 @@
+<script>
+import { useVuelidate } from '@vuelidate/core';
+import { required, minLength, helpers } from '@vuelidate/validators';
+
+export default {
+  setup() {
+    return {
+      v$: useVuelidate(),
+    };
+  },
+  data() {
+    return {
+      name: '',
+      phone: '',
+    };
+  },
+  validations() {
+    return {
+      name: {
+        required: helpers.withMessage('Требуется значение.', required),
+        minLenght: helpers.withMessage(
+          'Это поле должно быть длиной не менее 3 символов.',
+          minLength(3)
+        ),
+      },
+      phone: { required: helpers.withMessage('Требуется значение.', required) },
+    };
+  },
+};
+</script>
+
 <template>
   <div class="overlay"></div>
   <div class="popup-container">
@@ -31,7 +62,13 @@
           class="popup-input-field"
           id="name"
           placeholder="Иван"
+          v-model="name"
         />
+        <span class="popup-input-field-error-text" v-if="v$.name.$silentErrors">
+          <template v-for="error in v$.name.$silentErrors" :key="error.$uid"
+            >{{ error.$message }}&nbsp;
+          </template>
+        </span>
       </div>
       <div class="popup-input-container">
         <label for="phone" class="popup-input-label">Телефон</label>
@@ -40,7 +77,16 @@
           class="popup-input-field"
           id="phone"
           placeholder="+ 7"
+          v-model="phone"
         />
+        <span
+          class="popup-input-field-error-text"
+          v-if="v$.phone.$silentErrors"
+        >
+          <template v-for="error in v$.phone.$silentErrors" :key="error.$uid"
+            >{{ error.$message }}&nbsp;
+          </template>
+        </span>
       </div>
     </div>
     <div class="popup-button-container">
@@ -152,13 +198,21 @@
   padding: 16px 24px;
 }
 .popup-input-field,
-.popup-input-field::placeholder {
+.popup-input-field::placeholder,
+.popup-input-field-error-text {
   color: #fff;
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 28px; /* 155.556% */
+}
+.popup-input-field::placeholder {
+  opacity: 0.5;
+}
+.popup-input-field-error-text {
+  font-size: 12px;
+  line-height: normal;
 }
 .popup-button-container {
   display: flex;
