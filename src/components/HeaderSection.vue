@@ -67,9 +67,9 @@
           </div>
         </div>
         <div class="header-contact-container">
-          <div class="header-phone-container">
+          <a href="tel:8 (812) 603-71-79" class="header-phone-container">
             <span class="header-phone">8 (812) 603-71-79</span>
-          </div>
+          </a>
           <a href="tel:8 (812) 603-71-79" class="header-button">
             <div class="header-button-text">Обратный звонок</div>
           </a>
@@ -149,6 +149,9 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
+}
+.header-phone-container {
+  text-decoration: none;
 }
 .header-phone {
   color: #fff;
