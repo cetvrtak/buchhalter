@@ -1,6 +1,7 @@
 <script>
 import { useVuelidate } from '@vuelidate/core';
 import { required, minLength, helpers } from '@vuelidate/validators';
+import { mask } from 'vue-the-mask';
 
 export default {
   setup() {
@@ -8,6 +9,7 @@ export default {
       v$: useVuelidate(),
     };
   },
+  directives: { mask },
   data() {
     return {
       name: '',
@@ -77,6 +79,7 @@ export default {
           class="popup-input-field"
           id="phone"
           placeholder="+ 7"
+          v-mask="'+7 (###) ###-##-##'"
           v-model="phone"
         />
         <span
