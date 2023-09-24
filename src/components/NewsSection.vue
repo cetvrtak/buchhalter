@@ -81,7 +81,7 @@ export default {
 
 <style>
 .news-section {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 .news-title {
   color: #0a2641;
@@ -90,12 +90,22 @@ export default {
   font-style: normal;
   font-weight: 700;
   line-height: 48px; /* 133.333% */
-
-  margin-bottom: 40px;
+}
+.slick-list {
+  padding: 40px 0;
 }
 .slick-track {
   display: flex;
   gap: 24px;
+}
+.slick-dots li button:before {
+  opacity: 0.2;
+  color: #4851fd;
+  font-size: 12px;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #4851fd;
 }
 .news-card {
   border-radius: 32px;
