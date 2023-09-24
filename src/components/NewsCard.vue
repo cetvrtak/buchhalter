@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <div class="news-card">
+  <a href="#" class="news-card">
     <div class="news-image-container">
       <img :src="img" alt="" class="news-image" />
     </div>
@@ -19,7 +19,7 @@ export default {
       </div>
       <div class="news-date">{{ date }}</div>
     </div>
-  </div>
+  </a>
 </template>
 
 <style>
@@ -32,6 +32,13 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   flex: 1 0 0;
+
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.news-card:hover {
+  transform: scale(1.03);
+}
 .news-image {
   border-radius: 32px 32px 0px 0px;
   width: 100%;
