@@ -2,6 +2,7 @@
   <PopUp />
   <HeaderSection />
   <HeroSection />
+  <BenefitsSection />
   <div class="main-container">
     <NewsSection />
     <MapSection />
@@ -12,6 +13,7 @@
 import HeroSection from './components/HeroSection.vue';
 import PopUp from './components/PopUp.vue';
 import HeaderSection from './components/HeaderSection.vue';
+import BenefitsSection from './components/BenefitsSection.vue';
 import NewsSection from './components/NewsSection.vue';
 import MapSection from './components/MapSection.vue';
 import $ from 'jquery';
@@ -59,6 +61,7 @@ export default {
     HeroSection,
     PopUp,
     HeaderSection,
+    BenefitsSection,
     NewsSection,
     MapSection,
   },
