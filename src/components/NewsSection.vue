@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick.min.js';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import $ from 'jquery';
+import NewsCard from '../components/NewsCard.vue';
 
 export default {
   mounted() {
@@ -27,6 +28,37 @@ export default {
       ],
     });
   },
+  data() {
+    return {
+      newsCards: [
+        {
+          id: 1,
+          img: 'news-image-1.png',
+          desc: 'Критерии упрощенной системы налогообложения в 2023 году',
+          date: '29 мая 2023',
+        },
+        {
+          id: 2,
+          img: 'news-image-2.png',
+          desc: 'Критерии упрощенной системы налогообложения в 2023 году',
+          date: '29 мая 2023',
+        },
+        {
+          id: 3,
+          img: 'news-image-3.png',
+          desc: 'Критерии упрощенной системы налогообложения в 2023 году',
+          date: '29 мая 2023',
+        },
+        {
+          id: 4,
+          img: 'news-image-4.png',
+          desc: 'Критерии упрощенной системы налогообложения в 2023 году',
+          date: '29 мая 2023',
+        },
+      ],
+    };
+  },
+  components: { NewsCard },
 };
 </script>
 
@@ -35,54 +67,13 @@ export default {
     <div class="news-container">
       <div class="news-title">Новости</div>
       <div class="news-carousel" ref="slickCarousel">
-        <div class="news-card">
-          <div class="news-image-container">
-            <img src="../assets/news-image-1.png" alt="" class="news-image" />
-          </div>
-          <div class="news-text">
-            <div class="news-desc">
-              Критерии упрощенной системы налогообложения в 2023 году
-            </div>
-            <div class="news-date">29 мая 2023</div>
-          </div>
-        </div>
-        <div class="news-card">
-          <div class="news-image-container">
-            <img src="../assets/news-image-2.png" alt="" class="news-image" />
-          </div>
-          <div class="news-text">
-            <div class="news-desc">
-              Критерии упрощенной системы налогообложения в 2023 году
-            </div>
-            <div class="news-date">29 мая 2023</div>
-          </div>
-        </div>
-        <div class="news-card">
-          <div class="news-image-container">
-            <img src="../assets/news-image-3.png" alt="" class="news-image" />
-          </div>
-          <div class="news-text">
-            <div class="news-desc">
-              Критерии упрощенной системы налогообложения в 2023 году
-            </div>
-            <div class="news-date">29 мая 2023</div>
-          </div>
-        </div>
-        <div class="news-card">
-          <div class="news-image-container">
-            <img
-              src="https://picsum.photos/451/297"
-              alt=""
-              class="news-image"
-            />
-          </div>
-          <div class="news-text">
-            <div class="news-desc">
-              Критерии упрощенной системы налогообложения в 2023 году
-            </div>
-            <div class="news-date">29 мая 2023</div>
-          </div>
-        </div>
+        <template v-for="newsCard in newsCards" :key="newsCard.id">
+          <NewsCard
+            :img="require(`@/assets/${newsCard.img}`)"
+            :desc="newsCard.desc"
+            :date="newsCard.date"
+          ></NewsCard>
+        </template>
       </div>
     </div>
   </section>
