@@ -107,4 +107,25 @@ export default {
   opacity: 1;
   color: #4851fd;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 320px) {
+  .news-section {
+    padding: 40px 0;
+  }
+  .news-title {
+    color: #0a2641;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+  }
+  .slick-list {
+    padding: 24px 0;
+  }
+  .slick-dots li button:before {
+    font-size: 8px;
+  }
+}
 </style>
