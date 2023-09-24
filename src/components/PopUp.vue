@@ -2,6 +2,24 @@
 import { useVuelidate } from '@vuelidate/core';
 import { required, minLength, helpers } from '@vuelidate/validators';
 import { mask } from 'vue-the-mask';
+import $ from 'jquery';
+
+$(document).ready(function () {
+  const openPopUp = function () {
+    $('.overlay, .popup-container').fadeIn('slow');
+  };
+  const closePopUp = function () {
+    $('.overlay, .popup-container').hide();
+  };
+
+  $('.hero-button').on('click', openPopUp);
+  $('.overlay, .popup-close-btn').on('click', closePopUp);
+
+  $('.popup-button').on('click', function () {
+    closePopUp();
+    alert('Форма была успешно отправлена.');
+  });
+});
 
 export default {
   setup() {

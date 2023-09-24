@@ -17,16 +17,6 @@ import MapSection from './components/MapSection.vue';
 import $ from 'jquery';
 
 $(document).ready(function () {
-  const openPopUp = function () {
-    $('.overlay, .popup-container').fadeIn('slow');
-  };
-  const closePopUp = function () {
-    $('.overlay, .popup-container').hide();
-  };
-
-  $('.hero-button').on('click', openPopUp);
-  $('.overlay, .popup-close-btn').on('click', closePopUp);
-
   $('.header-menu-container').on('click', function () {
     $('.header-links-container, .header-link-container').toggleClass('active');
 
