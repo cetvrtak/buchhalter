@@ -20,12 +20,13 @@
 
 <style>
 .hero-section {
+  padding-top: 144px;
   background: #0a2641;
   color: #fff;
   height: 100vh;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .hero-title-container {

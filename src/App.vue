@@ -76,6 +76,7 @@ export default {
 }
 #app {
   font-family: Inter;
+  width: 100%;
 }
 .main-container {
   max-width: 1400px;
