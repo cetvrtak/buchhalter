@@ -20,9 +20,10 @@
 
 <style>
 .hero-section {
+  padding-top: 144px;
   background: #0a2641;
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;

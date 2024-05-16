@@ -86,7 +86,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  width: 100vw;
   z-index: 1;
 }
 .header-container {
